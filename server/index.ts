@@ -1,5 +1,8 @@
-import { router } from "./trpc";
+import express from "express"
 
-const appRouter = router({})
+const app = express()
+const PORT = 3000
 
-export type AppRouter = typeof appRouter
+app.get('/', (req, res) => res.send('hello'))
+
+app.listen(PORT, () => console.log(`Sample app listening on port ${PORT}!`))

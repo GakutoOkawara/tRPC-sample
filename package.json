@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@trpc/client": "^10.27.1",
-    "@trpc/server": "^10.27.1"
-  }
-}
