@@ -9,8 +9,7 @@ const PORT = 3000
 
 app.use(cors())
 
-const t = initTRPC.create()
-console.log(t)
+const t = initTRPC.context().create()
 
 const appRouter = t.router({
   helloWorld: t.procedure.query(() => {
