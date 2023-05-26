@@ -1,10 +1,10 @@
-import React from "react"
-import { trpc } from "../src/utils/trpc"
+import React from 'react'
+import { trpc } from '../src/utils/trpc'
 
 const Test = () => {
-  const helloWorld = trpc["hello-world"].useQuery()
-  console.log(helloWorld)
-  return <div>{helloWorld.data}</div>
+  const test = trpc.helloName.useQuery({ name: 'John', age: 10 })
+
+  return <div>{test.data?.greting}</div>
 }
 
 export default Test
